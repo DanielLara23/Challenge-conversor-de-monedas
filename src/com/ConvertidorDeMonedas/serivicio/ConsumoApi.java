@@ -10,17 +10,17 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ConsumoApi {
-    public MonedaDTO cambio (String monedaBase, String monedaDestino) {
+    public MonedaDTO consultaExchangerateApi (String monedaBase, String monedaDestino) {
 
         // Creacion de la URI para hacer la consulta
 
         URI direccionAPI = URI.create("https://v6.exchangerate-api.com/v6/4d256415987b092e7594fa25/pair/"
-                +monedaBase +"/"+monedaDestino);
+                + monedaBase + "/" + monedaDestino);
 
-        // Creacion de el cliente para Solicitudes (HttpClient)
+        // Creacion del cliente para Solicitudes (HttpClient)
         HttpClient client = HttpClient.newHttpClient();
 
-        // Hacendo la solicitud
+        // Haciendo la solicitud a la API
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(direccionAPI)
                 .build();

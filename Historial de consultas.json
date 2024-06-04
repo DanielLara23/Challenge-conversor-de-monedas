@@ -1,0 +1,26 @@
+[
+  {
+    "tipoDeConvercion": 0.008007,
+    "momentoDeLaConsulta": "2024-06-03 21:20:18",
+    "cantidadDeMonedasAConvertir": 3,
+    "cantidadConvertida": 0.024021,
+    "codigoDeMonedaBase": "ARS",
+    "codigoDeMonedaDestino": "BOB"
+  },
+  {
+    "tipoDeConvercion": 6.9237,
+    "momentoDeLaConsulta": "2024-06-03 21:20:22",
+    "cantidadDeMonedasAConvertir": 3,
+    "cantidadConvertida": 20.7711,
+    "codigoDeMonedaBase": "USD",
+    "codigoDeMonedaDestino": "BOB"
+  },
+  {
+    "tipoDeConvercion": 0.1444,
+    "momentoDeLaConsulta": "2024-06-03 21:20:25",
+    "cantidadDeMonedasAConvertir": 4,
+    "cantidadConvertida": 0.5776,
+    "codigoDeMonedaBase": "BOB",
+    "codigoDeMonedaDestino": "USD"
+  }
+]
