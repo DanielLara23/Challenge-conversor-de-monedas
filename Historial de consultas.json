@@ -1,10 +1,10 @@
 [
   {
-    "tipoDeConvercion": 0.00608,
-    "momentoDeLaConsulta": "2024-06-05 11:01:11",
-    "cantidadDeMonedasAConvertir": 2,
-    "cantidadConvertida": 0.01216,
+    "tipoDeConvercion": 1.0,
+    "momentoDeLaConsulta": "2024-06-05 12:13:36",
+    "cantidadDeMonedasAConvertir": 1,
+    "cantidadConvertida": 1.0,
     "codigoDeMonedaBase": "ARS",
-    "codigoDeMonedaDestino": "BRL"
+    "codigoDeMonedaDestino": "ARS"
   }
 ]

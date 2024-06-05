@@ -7,25 +7,33 @@ public class Menu {
     Scanner teclado = new Scanner(System.in);
     public int menu1 (){
         System.out.println("""
-                Que deseas hacer?
-                Preciona 1 para realizar una consulta
-                Preciona 2 para ver tu historial de consultas
-                Preciona 3 para salir""");
+                ¿Qué deseas hacer?
+                Presiona 1 para realizar una consulta
+                Presiona 2 para ver tu historial de consultas
+                Presiona 3 para salir""");
                 return teclado.nextInt();
     }
 
     public void muestraMonedasDisponibles(){
-        List<String> nombreDeMonedas = Arrays.asList("Peso argentino", "Boliviano boliviano", "Real brasileño", "Peso chileno", "Peso colombiano", "Dólar estadounidense", "Peso mexicano");
+        List<String> nombreDeMonedas = Arrays.asList(
+                "Peso argentino",
+                "Boliviano boliviano",
+                "Real brasileño",
+                "Peso chileno",
+                "Peso colombiano",
+                "Dólar estadounidense",
+                "Peso mexicano"
+        );
         System.out.println("""
+                
                 *******************************************************
-                Bienvenido al conversor de monedas.
+                ¡Bienvenido al conversor de monedas!
                 Estas son las monedas disponibles:""");
         final int[] index = {1};
         nombreDeMonedas.forEach(elemento -> {
             System.out.println(index[0] + "._ " + elemento);
             index[0]++;
         });
-        System.out.println("Para ver tu historial preciona H");
     }
 
         public String[] obtenerDatos() {
@@ -57,7 +65,7 @@ public class Menu {
 
                 // Entrada y validacion de la cantidad de monedas a convertir
                 try {
-                    System.out.println("Cual es la cantidad de monedas que deseas convertir?");
+                    System.out.println("¿Cuál es la cantidad de monedas que deseas convertir?");
                     cantidadDeMonedas = teclado.nextInt();
                     if (cantidadDeMonedas <= 0) {
                         throw new IllegalArgumentException("Valor no válido: la cantidad debe ser mayor que cero.");
@@ -100,7 +108,7 @@ public class Menu {
         // Solicitar al usuario si desea realizar otra consulta
         boolean entradaValida = false;
         while (!entradaValida) {
-            System.out.println("Deseas hacer otra consulta? (S/N)");
+            System.out.println("¿Deseas hacer otra consulta? (S/N)");
             condicion = decicion.nextLine();
             if (condicion.equalsIgnoreCase("S") || condicion.equalsIgnoreCase("N")) {
                 entradaValida = true;
@@ -108,6 +116,7 @@ public class Menu {
                 System.out.println("Entrada no válida. Por favor, ingresa 'S' para sí o 'N' para no.");
             }
         }
+        System.out.println("\n");
         return condicion;
     }
 }

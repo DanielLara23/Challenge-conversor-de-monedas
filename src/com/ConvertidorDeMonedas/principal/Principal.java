@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class Principal {
         int eleccionUsuario = menuPrincipal.menu1();
         while (eleccionUsuario!=3) {
 
-            if (eleccionUsuario == 1){
+            if (eleccionUsuario == 1) {
                 String condicion = "S";
                 while (condicion.equalsIgnoreCase("S")) {
 
@@ -59,7 +58,6 @@ public class Principal {
                     datosMonedas.setCantidadConvertida(datosMonedas.convertidor(datosMonedas.getCantidadDeMonedasAConvertir(), datosMonedas.getTipoDeConvercion()));
                     System.out.println(datos[1] + " " + datosMonedas.getCodigoDeMonedaBase() + " son " + datosMonedas.getCantidadConvertida() + " " + datosMonedas.getCodigoDeMonedaDestino());
 
-
                     // Preguta al usuario si desea hacer otra convercion o salir del programa
                     condicion = muestraMenu.realizaNuevaConsulta(condicion);
 
@@ -72,15 +70,20 @@ public class Principal {
                 }
 
             } else if (eleccionUsuario == 2) {
-                if (historialDeMonedasConsultadas.size()==0){
-                    System.out.println("\nNo has realizado ninguna consulta, tu historial esta vacio\n");
-                }else {
-                    System.out.println("Tu historial de consultas es el siguiente: ");
+                if (historialDeMonedasConsultadas.size() == 0) {
+                    System.out.println("\n---No has realizado ninguna consulta, tu historial está vacío.---\n");
+                } else {
+                    System.out.println("""
+                    
+                    *******************************************************
+                    Tu historial de consultas es el siguiente:""");
                     historialDeMonedasConsultadas.forEach(System.out::println);
+                    System.out.println("*******************************************************\n");
                 }
             }
             eleccionUsuario = menuPrincipal.menu1();
 
-        }System.out.println("Vuelva pronto");
+        }
+        System.out.println("Vuelva pronto.");
     }
 }

@@ -11,10 +11,10 @@ import java.net.http.HttpResponse;
 
 public class ConsumoApi {
     public MonedaDTO consultaExchangerateApi (String monedaBase, String monedaDestino) {
-
+        String APIKEY = "4d256415987b092e7594fa25";
         // Creacion de la URI para hacer la consulta
 
-        URI direccionAPI = URI.create("https://v6.exchangerate-api.com/v6/4d256415987b092e7594fa25/pair/"
+        URI direccionAPI = URI.create("https://v6.exchangerate-api.com/v6/" + APIKEY + "/pair/"
                 + monedaBase + "/" + monedaDestino);
 
         // Creacion del cliente para Solicitudes (HttpClient)

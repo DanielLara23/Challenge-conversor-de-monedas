@@ -48,16 +48,11 @@ public class Convertidor extends com.ConvertidorDeMonedas.serivicio.Moneda {
     public String toString() {
         int contador = 0;
         return
-                "- El momento de la consulta fue: '" + getMomentoDeLaConsulta()+
-
-                ", Codigo de la moneda base: '" + getCodigoDeMonedaBase() +
-
-                ", Cantidad de monedas a convertir: " + getCantidadDeMonedasAConvertir() +
-
-                ", Codigo de la moneda de destino: '" + getCodigoDeMonedaDestino() +
-
-                ", Tipo de cambio: " + tipoDeConvercion +
-
-                ", Cantidad de monedas convertidas: " + getCantidadConvertida();
+                "- El momento de la consulta fue: '" + getMomentoDeLaConsulta() + "'" +
+                        ", Código de la moneda base: '" + getCodigoDeMonedaBase() + "'" +
+                        ", Cantidad de monedas a convertir: " + getCantidadDeMonedasAConvertir() +
+                        ", Código de la moneda de destino: '" + getCodigoDeMonedaDestino() + "'" +
+                        ", Tipo de cambio: " + tipoDeConvercion +
+                        ", Resultado de la converción: " + getCantidadConvertida();
     }
 }
