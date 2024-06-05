@@ -27,7 +27,7 @@ public class Principal {
                     Menu muestraMenu = new Menu();
                     Historial historialDeConsultas = new Historial();
 
-                    // Crear un DateTimeFormatter con el formato deseado
+                    // Creacion un DateTimeFormatter con el formato deseado
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
                     // Obtener la fecha y hora actuales
@@ -70,9 +70,14 @@ public class Principal {
                         throw new RuntimeException(e);
                     }
                 }
+
             } else if (eleccionUsuario == 2) {
-                System.out.println("Tu historial de consultas es el siguiente: ");
-                historialDeMonedasConsultadas.forEach(System.out::println);
+                if (historialDeMonedasConsultadas.size()==0){
+                    System.out.println("\nNo has realizado ninguna consulta, tu historial esta vacio\n");
+                }else {
+                    System.out.println("Tu historial de consultas es el siguiente: ");
+                    historialDeMonedasConsultadas.forEach(System.out::println);
+                }
             }
             eleccionUsuario = menuPrincipal.menu1();
 
